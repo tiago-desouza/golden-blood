@@ -1,8 +1,5 @@
 # GoldenBlood Project
 
-## Descrição
-Este projeto é uma aplicação Spring Boot que expõe uma API para manipulação e consulta de dados relacionados a candidatos e doadores de sangue.
-
 ## Pré-requisitos
 
 1. **Java 21** - Certifique-se de ter o JDK 21 instalado.
@@ -21,6 +18,17 @@ Este projeto é uma aplicação Spring Boot que expõe uma API para manipulaçã
    ```
 
    Isso criará um banco de dados chamado `goldenblood` com o usuário `goldenblood` e senha `goldenblood@123`.
+
+
+2. **Inserindo a Role Padrão:**
+
+Após configurar o banco de dados, execute o seguinte comando SQL para inserir a role padrão no banco de dados:
+
+   ```sql
+   INSERT INTO goldenblood.roles (name) VALUES('ROLE_USER');
+   ```
+
+   Você pode executar este comando usando qualquer ferramenta de administração de banco de dados, como MySQL Workbench, DBeaver, ou via linha de comando no MySQL.
 
 ## Executando o Projeto
 
