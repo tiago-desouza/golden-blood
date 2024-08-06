@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: golden-blood
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+security:
+  app:
+    jwtSecret: 19ec0d5207088eb293fcd43febe3b7c4f66386dd178fa2436544af4162cb486c178b5ae67bf8d9642c3b054bad92f6a662840428ac72db4cbce30e57f04babdd40f75cb0baeadf3cd1d3587eae18fc8f5ab7b2346b01963a9dc339a70866f5438557d4eb04ed0e8fd68217048709a1ccc83fac424ae4de389f75c3a9841e4762c12037aeb0530e5649e37a617c3f92ba497116e2c2d01f66dd223d15d447bf3ecc0362f1a5c0323c7980d5c51de3e6396a9a57accaac9716c64ab307e1441815b733ae7ced2878c6b9542caed08ed0a629e4e61317b0be06ea98ad0ea764bd62a7f2fc064849884ff4c2fe958fb1b94e1961f7ebe98787c0403cf503abcd0a41
+    jwtExpirationMs: 21600
+---
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: goldenblood
+    password: goldenblood@123
+    url: jdbc:mysql://localhost:3306/goldenblood?allowPublicKeyRetrieval=true&useSSL=false
