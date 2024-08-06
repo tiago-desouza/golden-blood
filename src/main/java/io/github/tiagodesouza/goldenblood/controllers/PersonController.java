@@ -25,7 +25,6 @@ public class PersonController {
     @PostMapping
     public ResponseEntity<Void> registerPersons(@RequestBody List<PersonDTO> personsDTO) {
         System.out.println(personsDTO);
-//        personService.registerPersons(personsDTO);
         return ResponseEntity.created(URI.create("/")).build();
     }
 
